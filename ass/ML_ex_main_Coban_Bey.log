@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.3.30)  11 MAY 2017 09:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.3.30)  11 MAY 2017 15:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -969,7 +969,7 @@ Package scrlayer-scrpage Info: auto-selection of `pagestyleset=KOMA-Script'.
 1: chapter
 1: chapter
 1: section
-(./ML_ex_main_Coban_Bey.aux (./01/ex_01.aux))
+(./ML_ex_main_Coban_Bey.aux (./02/ex_02.aux))
 \openout1 = `ML_ex_main_Coban_Bey.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
@@ -1079,9 +1079,9 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\openout2 = `01/ex_01.aux'.
+\openout2 = `02/ex_02.aux'.
 
-(./01/ex_01.tex
+(./02/ex_02.tex
 LaTeX Font Info:    Try loading font information for U+msa on input line 1.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1096,81 +1096,68 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-chapter 1.
+chapter 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--21
-
- []
-
-[2
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 39--41
+Underfull \hbox (badness 10000) in paragraph at lines 6--9
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--66
-
- []
-
-<01/Blatt1_A2a.jpg, id=24, 572.1375pt x 421.575pt>
-File: 01/Blatt1_A2a.jpg Graphic file (type jpg)
- <use 01/Blatt1_A2a.jpg>
-Package pdftex.def Info: 01/Blatt1_A2a.jpg used on input line 69.
-(pdftex.def)             Requested size: 204.85672pt x 150.94992pt.
-
-[3 <./01/Blatt1_A2a.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
-
- []
-
-<01/Blatt1_A2b.jpg, id=28, 572.1375pt x 421.575pt>
-File: 01/Blatt1_A2b.jpg Graphic file (type jpg)
- <use 01/Blatt1_A2b.jpg>
-Package pdftex.def Info: 01/Blatt1_A2b.jpg used on input line 75.
-(pdftex.def)             Requested size: 204.85672pt x 150.94992pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--79
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
 
 
-Overfull \hbox (17.55739pt too wide) in paragraph at lines 79--81
-[]\OT1/cmr/m/n/12 Um die Wahr-schein-lich-keit ei-nes Events in-ner-halb ei-nes
- In-ter-valls zu be-rech-nen wird der Fl[]acheninhalt
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--84
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
  []
 
-) [4 <./01/Blatt1_A2b.jpg>] (./ML_ex_main_Coban_Bey.aux (./01/ex_01.aux)) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--20
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--23
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+
+ []
+
+) [2
+
+] (./ML_ex_main_Coban_Bey.aux (./02/ex_02.aux)) ) 
 Here is how much of TeX's memory you used:
- 18208 strings out of 494893
- 367056 string characters out of 6178672
- 644127 words of memory out of 5000000
- 21144 multiletter control sequences out of 15000+600000
- 13647 words of font info for 51 fonts, out of 8000000 for 9000
+ 18196 strings out of 494893
+ 366833 string characters out of 6178672
+ 642127 words of memory out of 5000000
+ 21135 multiletter control sequences out of 15000+600000
+ 13347 words of font info for 50 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 64i,20n,66p,8831b,621s stack positions out of 5000i,500n,10000p,200000b,80000s
-</us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-ssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on ML_ex_main_Coban_Bey.pdf (4 pages, 159385 bytes).
+ 64i,19n,66p,8831b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on ML_ex_main_Coban_Bey.pdf (2 pages, 110837 bytes).
 PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
+ 58 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
