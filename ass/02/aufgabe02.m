@@ -19,14 +19,20 @@ sigma2=0.3;
 
 end
 %% c)1.
-function p = likelihood(x, mu, sigma)
-p = normpdf(x, mu, sigma)
+function p = likelihood_lachs(x)
+p = normpdf(x, 1.6, 0.3)
 end
 
-function e =evidence(data, x)
-
+function p = likelihood_barsch(x)
+p = normpdf(x, 1, 0.2)
 end
 
+function e =evidence(x)
+ 0.5 * likelihood_lachs(x) + 0.5 * likelihood_barsch(x)
+end
 
+function a_posteriori_lachs(x)
+  (likelihood_lachs(x) * 0.5) / evidence(c)
+end
 
 
