@@ -4,7 +4,6 @@ data = csvread('fische.csv'); %2)a)
 hist(data)  %2)b)
 mittel=mean(data);
 
-data(2)+1
 % Erste Schätzung der Mittelwerte: Fisch 1 ca: 
 % Mittelwert über alle Fische: 1.2321
 % Mittelwert über die Erwartungswerte= 2.6/2=1.3
