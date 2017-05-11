@@ -23,15 +23,25 @@ y = a_posteriori_barsch(x);
 figure
 plot(x,y)
 
-%klassifiziere alle Testdaten und gebe sie aus 2)e)
+%Plot für 3)b) (Risiko Barsche)
+y = 1.2 .* a_posteriori_barsch(x);
+figure
+plot(x,y)
+
+%Plot für 3)b) (Risiko Lachse)
+y = 0.5 .* a_posteriori_lachs(x);
+figure
+plot(x,y)
+
+%klassifiziere alle Testdaten und gebe sie aus 2)e) und 3)a)
 lachs = 0;
 barsch = 0;
 for i = 1:length(data)
     if a_posteriori_lachs(data(i)) > a_posteriori_barsch(data(i))
-        fprintf('%f: Lachs\n', data(i))
+        fprintf('%f: Lachs, Risiko: %f\n', data(i), 0.5 * a_posteriori_lachs(data(i)))
         lachs = lachs + 1;
     else
-        fprintf('%f: Barsch\n', data(i))
+        fprintf('%f: Barsch, Risiko: %f\n', data(i), 1.2 * a_posteriori_barsch(data(i)))
         barsch = barsch + 1;
     end
 end
@@ -40,7 +50,32 @@ end
 fprintf('Anteil der Lachse: %f\n', lachs / (barsch + lachs))
 fprintf('Anteil der Barsch: %f\n', barsch / (barsch + lachs))
 
+
+
+%3)c)
+lachs = 0;
+barsch = 0;
+for i = 1:length(data)
+    if 1.2 * a_posteriori_lachs(data(i)) > 0.5 * a_posteriori_barsch(data(i))
+        fprintf('%f: Lachs (mit Risikoabschätzung)\n', data(i))
+        lachs = lachs + 1;
+    else
+        fprintf('%f: Barsch (mit Risikoabschätzung)\n', data(i))
+        barsch = barsch + 1;
+    end
 end
+
+fprintf('Anteil der Lachse (mit Risikoabschätzung): %f\n', lachs / (barsch + lachs))
+fprintf('Anteil der Barsch (mit Risikoabschätzung): %f\n', barsch / (barsch + lachs))
+
+%3)d) Wird zum Beispiel lambda(Barsch|Lachs) erhöht werden weniger Lachse
+%fälschlicherweise als Barsch klassifiziert, aber dafür werden auch mehr
+%Barsche fälschlicherweise als Lachs klassifiziert. 
+
+end
+
+
+
 
 % 2)c)
 function p = likelihood_lachs(x)
