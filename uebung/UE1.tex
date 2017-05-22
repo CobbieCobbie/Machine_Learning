@@ -1,0 +1,48 @@
+\begin{VL}19.05.2017
+\end{VL}
+
+\begin{topic} Stochastik Wiederholung
+\end{topic}
+
+\begin{definition}Satz von Beyes
+\end{definition}
+\begin{align*}P(X\mid Y) = \frac{P(Y\mid X) \cdot P(X)}{P(Y)}
+\end{align*}
+
+Das ist der Satz von Beyes, was der bedingten Wahrscheinlichkeit entspricht. 
+
+\begin{align*}P(X\mid Y) = \frac{P(X\cup Y)}{P(Y)}
+\end{align*}
+
+\begin{align*}P(A) = \sum_{j\in I} \underbrace{P(A\mid B_j)P(B_j)}_{P(A\cup B_j)}
+\end{align*}
+
+$Y$ entspricht den Daten. Alles davon abhängig, was die Messdaten hergeben. Wie kann man eine Klassifikation durchführen? Das $P(Y)$ steckt in jedem Vergleich zwischen zwei Wahrscheinlichkeiten mit drin, ist deshalb auch wegzulassen. 
+
+\begin{definition}
+	Bayesche Entscheidungsregel
+\end{definition}
+Wie gut ist unser $\omega$?
+\begin{align*}
+	\mathbb{P}(\omega_i\mid x)\\
+	\omega(x) \in \Omega\\
+	\omega: X \to \Omega\\
+	\int_x \mathbb{P}(\omega(x)\mid x)p(x)~\text{d}x \in [0,1]
+\end{align*}
+Das Integral berechnet den Anteil, wie oft ich mich tatsächlich richtig entschieden habe. 
+
+\begin{topic}Loss Funktion
+\end{topic}
+$\lambda(\omega_i\mid \omega_j)$: in Wirklichkeit $\omega_j$, klassifiziert $\omega_i$ beschreibt die \underline{Fehlerdramatik}
+\begin{align*}R(\omega_i\mid x) = \sum_{j = 1}^{N} \lambda(\omega_i|\omega_j)\cdot \mathbb{P}(\omega_j\mid x)
+\end{align*}
+Das berechnet also das \underline{Risiko} meiner Entscheidungen. Gesamtrisiko:
+\begin{align*}
+\mathcal{R}(\omega) = \int_x R(\omega(x)\mid x)\cdot p(x)~\text{d}x
+\end{align*}
+Und das möchte ich natürlich minimieren. Komme somit auf das \underline{Baye'sche Gesamtrisiko}
+
+\begin{topic}UE1:Aufgabe 2
+\end{topic}
+
+$\sigma$ Standardabweichung, $\mu$ Varianz

@@ -1,0 +1,71 @@
+
+\documentclass[12pt,DIV11,ngerman,a4paper]{scrreprt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Einbinden weiterer Pakete % fuer die deutschen Trennmuster
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+
+\usepackage[ngerman]{babel} %Sie Umlaute in den Quellen verwenden wollen
+%\inputencoding{babel}
+\usepackage{amsmath}   % enthaelt nuetzliche Makros fuer Mathematik
+\usepackage{amsthm}    % fuer Saetze, Definitionen, Beweise, etc.
+\usepackage{amsfonts}
+\usepackage{nicefrac}
+\usepackage{relsize}
+\usepackage{fp}
+\usepackage{tikz}
+
+\usepackage{blindtext}
+\usepackage{lipsum} % für filler text
+
+\usepackage{graphicx} % für Bilder
+
+
+% % % % Geometry
+\usepackage{relsize}
+\usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm,includeheadfoot]{geometry}
+
+% % % Fancyhdr für Header / Footer
+% \usepackage{fancyhdr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deklaration eigener Mathematik-Makros
+\newcommand{\N}{\ensuremath{\mathbb{N}}}   % natuerliche Zahlen
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}   % ganze Zahlen
+\newcommand{\Q}{\ensuremath{\mathbb{Q}}}   % rationale Zahlen
+\newcommand{\R}{\ensuremath{\mathbb{R}}}   % reelle Zahlen
+\newtheorem{aufgabe}[section]{Aufgabe}
+\newtheorem{VL}[chapter]{Vorlesung}
+\newtheorem{bsp}[subsection]{Beispiel}
+\newtheorem{topic}[section]{Thema}
+\newtheorem{bem}[subsection]{Bemerkung}
+\newtheorem{definition}[subsection]{Definition}
+\newenvironment{beweis}%
+{\begin{proof}[Beweis]}
+	{\end{proof}}
+
+\usepackage[automark,headsepline]{scrlayer-scrpage} % scrpage mit footer die Seitenzahl
+\pagestyle{scrheadings}  
+\clearpairofpagestyles
+\cfoot[\pagemark]{\pagemark}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\codation}[1]{\begin{quotation}\code{#1}
+	\end{quotation}}
+
+% % % Titlepage Makros
+\newcommand{\decr}[1]{\number\numexpr#1-1\relax}
+\newcommand{\ExTitle}[1]{
+	\selectlanguage{ngerman}
+	\setcounter{chapter}{\decr{#1}}
+	\date{\today}
+	\subject{WSI für Informatik \small an der Karls-Eberhardt Universität Tübingen}
+	\author{\large Benjamin Çoban \small 3526251}
+	\title{Machine Learning}
+	\subtitle{Übungszusammenfassung}
+	\maketitle
+}
+\begin{document}
+%\ExTitle{1}
+\include{UE1}
+\end{document}
