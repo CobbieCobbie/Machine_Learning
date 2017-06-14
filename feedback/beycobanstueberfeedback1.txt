@@ -1,0 +1,27 @@
+Feedback Übung 1				Bey, Coban, Stüber
+
+
+Aufgabe 1										
+a	b	c	d	e–i	e-ii	e-iii	e-iv	e-v	1f	Σ
+1,0	1,0	1,0	1,0	1,5	1,0	2,0	2,0	2,0	1,5	14,0
+
+Aufgabe 2							
+a	b	c	d	e	Σ
+2,0	3,5	2,0	2,0	2,0	11,5
+
+Aufgabe 3			
+a	b	c	Σ
+–	–	–	0,0
+
+Aufgabe 4					
+b	c	d	e	f	Σ
+–	–	–	–	–	0,0
+
+
+Gesamt:		25,5
+
+
+Anmerkungen:
+
+Die Höchstpunktzahl von Aufgabe 1e) iv) wurde auf 2 reduziert, somit die für Aufgabe 1 insgesamt auf 16 und die für ganze Blatt auf 44. 
+

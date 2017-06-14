@@ -1,0 +1,27 @@
+Feedback Übung 2				Bey, Coban, Stüber
+
+
+Aufgabe 1
+a	b	c	d	e	f	g	Σ
+1,0	0,0	1,0	1,0	1,0	1,0	1,0	6,0
+										
+Aufgabe 2
+c i	c ii	c iii	d	e	f	g	Σ
+2,0	2,0	2,0	1,0	3,0	1,0	–	11,0
+
+Aufgabe 3	
+a	b	c	d	Σ
+1,0	2,0	2,0	1,0	6,0
+
+
+Gesamt:		23,0
+
+
+Anmerkungen:
+
+2b:	2b: Es geht um die Verlässlichkeit der angenommenen Mittelwerte, d. h. 1,0 und 1,6 m
+2d:	Erklärung fehlt; Plots besser in ein Diagramm schreiben und beschriften
+2f:	Beurteilung?
+3a:	Risiko falsch berechnet
+3b:	Folgefehler; Plots besser in ein Diagramm schreiben und beschriften
+3d:	Änderung nur beschrieben, nicht durchgeführt

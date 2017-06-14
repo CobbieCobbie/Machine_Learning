@@ -1,0 +1,13 @@
+Feedback Übung 3				Bey, Coban, Stüber
+
+
+b	c	d	e	f	g	Σ
+3,0	2,0	8,0	2,0	3,0	–	18,0
+
+
+Anmerkungen:
+
+b:	Unvollständig; Histogramm nicht sehr aussagekräftig
+d:	Berechnung likelihoods falsch	
+e:	Fehler in der Zählung	
+f:	Beschreibung knapp
