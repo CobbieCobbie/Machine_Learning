@@ -1,0 +1,21 @@
+function main
+
+%Aufgabe a)
+dataSetosa = csvread('trainingSetosa.csv');
+dataVersicolor = csvread('trainingVersicolor.csv');
+dataVirginica = csvread('trainingVirginica.csv');
+
+
+data = [dataSetosa; dataVersicolor; dataVirginica];
+
+[pc ws scatter] = pca( data ); %3b
+
+(scatter(1) + scatter(2)) / sum(scatter) %3c, mehr als 95% der Streuung befinden sich in den ersten beiden PCs, abgesehen von davon gibts es keine Kombination mit mehr als 95%
+
+for i = 1 : length(data)
+    
+    data() * pc(:, 1:2)
+end
+
+
+end 
