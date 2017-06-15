@@ -24,21 +24,22 @@ Einzuzeichnen sind in die Grafiken die erste Komponente nach PCA, also die Richt
 		\includegraphics[width=0.4\textwidth]{05/data/img1}
 	}\\
 \end{center}
-Hier sind die Daten verstreut in einer Punktemenge, wobei schlecht unterschieden werden kann. Der PCA bietet sich an, durch einen PCA würde die Streuung verdeutlicht werden und das wäre mit einer fortsetzenden LDA förderlich für die Klassifizierung.
+Hier sind die Daten verstreut in einer Punktemenge, welche einer Gerade angenähert gleicht. Es würde sich also PCA anbieten, da die Abweichungen zu dieser Gerade (roter Pfeil) nicht allzu groß sind in den meisten Fällen. Für die Klassifizierung wäre es allerdings auch nicht förderlich.
 \begin{center}
 	\fbox{
 		\includegraphics[width=0.7\textwidth]{05/data/img2}
 	}\\
 \end{center}
-Hier würde ein PCA die bereits getrennten Klassen wieder zusammenschmeißen, was wiederum nicht förderlich für eine Klassifizierung wäre. Auch wäre ein PCA hier nicht angebracht, da die Daten so separiert sind, wie sie sind.
+Hier haben wir große interne Streuungen, welche die Cluster beide besitzen. Ein PCA wäre somit nicht förderlich. Die Reduktion auf die erste Komponente würde auch die weitere Klassifizierung beeinträchtigen.
 \begin{center}
 	\fbox{
 		\includegraphics[width=0.7\textwidth]{05/data/img3}
 	}\\
 \end{center}
-Hier wäre ein PCA angebracht, um die "Grenzen der Klassen" ein wenig besser zu durchforsten. Es könnte insofern förderlich für die Klassifizierung sein, dass wir dann anschließend durch LDA weniger Fehler begehen.
+Hier wäre ein PCA angebracht, da die Streuung wie bei (a), somit könnte man auf die erste Komponente reduzieren. Es ist allerdings auf den ersten Anblick nicht förderlich für die Klassifizierung.
 \begin{center}
 	\fbox{
 		\includegraphics[width=0.7\textwidth]{05/data/img4}
 	}\\
 \end{center}
+Siehe (b)
