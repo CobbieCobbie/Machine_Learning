@@ -1,0 +1,37 @@
+\ExTitle{4}
+\setcounter{chapter}{3}
+\chapter{Korrektur}
+
+\begin{aufgabe}
+\end{aufgabe}
+
+Monotonie
+
+c) wichtige Annahmen: gibt es eine Verteilung meiner Parameter? Unabhängigkeitsannahme. Annahme der parametrischen Form.
+d) Fehler: Basefehler: Wenn sich die Varianz überlappt, kann man nie perfekt entscheiden. Falsche parametrische Form, größerer Schätzfehler als minimal möglich.
+
+\begin{aufgabe}
+\end{aufgabe}
+
+Gegeben sind Ergebnisse $x_1,...,x_n$ von unabhängigen und identisch verteilten Zufallsvariablen $X_1,...,X_n$. 
+Ableiten, Kettenregel, Nullstellen berechnen.
+
+\begin{align*}
+\ln(p(x))=
+bla+\frac{-(x-\mu)^2}{2\sigma^2}\\
+\frac{d}{d\mu} \ln(p(\mu)) = \frac{x-\mu}{\sigma^2}\\
+\sum \frac{x_i - \mu}{\sigma^2} = 0\\
+\Rightarrow \sum x_i = n\cdot \hat{\mu}
+\end{align*}
+Erste Aufgabe: Was ist der maxlikelihood Schätzer für $\mu$ normalverteilt
+\begin{align*}
+\hat{\mu} = \frac{1}{n} \sum x_i\\
+\hat{\sigma}^2 = \frac{1}{n} \sum (x_i - \hat{\mu})^2
+\end{align*}
+$\hat{\mu}$ als maximum, siehe analysis aus der Schule (Ableiten bla). Wollen ja
+\begin{align*}
+\begin{pmatrix}\mu \\
+\sigma ^2
+\end{pmatrix} \to p(\mu,\sigma^2)
+\end{align*}
+zu maximieren. Also: Gradient bilden (Mathe II)

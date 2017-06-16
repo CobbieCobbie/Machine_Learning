@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.5.25)  15 JUN 2017 02:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.5.25)  16 JUN 2017 14:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -971,7 +971,7 @@ Package scrlayer-scrpage Info: auto-selection of `pagestyleset=KOMA-Script'.
 1: chapter
 1: chapter
 1: section
-(./ML_ex_main_Stueber_Coban_Bey.aux (./05/ex_05.aux))
+(./ML_ex_main_Stueber_Coban_Bey.aux (./04/correct_04.aux))
 \openout1 = `ML_ex_main_Stueber_Coban_Bey.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
@@ -1081,15 +1081,14 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\openout2 = `05/ex_05.aux'.
+\openout2 = `04/correct_04.aux'.
 
-(./05/ex_05.tex
+(./04/correct_04.tex
 LaTeX Font Info:    Try loading font information for U+msa on input line 1.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 1.
-
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -1098,59 +1097,36 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-chapter 5.
-<05/data/img1.jpg, id=14, 562.1pt x 421.575pt>
-File: 05/data/img1.jpg Graphic file (type jpg)
- <use 05/data/img1.jpg>
-Package pdftex.def Info: 05/data/img1.jpg used on input line 25.
-(pdftex.def)             Requested size: 204.85672pt x 153.6388pt.
- [2
+chapter 4.
+[2
 
 ]
-<05/data/img2.jpg, id=25, 562.1pt x 421.575pt>
-File: 05/data/img2.jpg Graphic file (type jpg)
- <use 05/data/img2.jpg>
-Package pdftex.def Info: 05/data/img2.jpg used on input line 31.
-(pdftex.def)             Requested size: 358.50317pt x 268.87433pt.
+chapter 4.
+) [3
 
-<05/data/img3.jpg, id=26, 562.1pt x 421.575pt>
-File: 05/data/img3.jpg Graphic file (type jpg)
- <use 05/data/img3.jpg>
-Package pdftex.def Info: 05/data/img3.jpg used on input line 37.
-(pdftex.def)             Requested size: 358.50317pt x 268.87433pt.
- [3 <./05/data/img1.jpg> <./05/data/img2.jpg>]
-<05/data/img4.jpg, id=30, 562.1pt x 421.575pt>
-File: 05/data/img4.jpg Graphic file (type jpg)
- <use 05/data/img4.jpg>
-Package pdftex.def Info: 05/data/img4.jpg used on input line 43.
-(pdftex.def)             Requested size: 358.50317pt x 268.87433pt.
-) [4 <./05/data/img3.jpg> <./05/data/img4.jpg>] (./ML_ex_main_Stueber_Coban_Bey
-.aux
-(./05/ex_05.aux)) ) 
+] (./ML_ex_main_Stueber_Coban_Bey.aux (./04/correct_04.aux)) ) 
 Here is how much of TeX's memory you used:
- 18223 strings out of 494893
- 367334 string characters out of 6178672
- 644207 words of memory out of 5000000
- 21155 multiletter control sequences out of 15000+600000
+ 18200 strings out of 494893
+ 367009 string characters out of 6178672
+ 643208 words of memory out of 5000000
+ 21139 multiletter control sequences out of 15000+600000
  13347 words of font info for 50 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 64i,19n,67p,8839b,496s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
-12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmti12.pfb>
-Output written on ML_ex_main_Stueber_Coban_Bey.pdf (4 pages, 229646 bytes).
+ 64i,20n,75p,8839b,481s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on ML_ex_main_Stueber_Coban_Bey.pdf (3 pages, 105133 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
+ 57 PDF objects out of 1000 (max. 8388607)
+ 41 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
