@@ -1,3 +1,5 @@
+%Thomas Stueber, Lea Bey, Benjamin Coban
+
 %the state is impemented as an instance of containers.Map, whether there is
 %a specific variable set or not can be checked by isKey, the values
 %specified vor the variables are the numbers as specified in exercise 2

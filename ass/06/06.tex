@@ -1,6 +1,39 @@
 \ExTitle{6}
 \begin{aufgabe}
 \end{aufgabe}
+
+\begin{enumerate}[a)] 
+	\item Bayessche Netze
+	\begin{itemize}
+		\item[Knoten] entsprechen den Zufallsvariablen
+		\item[Kanten] entsprechen den bedingten Wahrscheinlichkeiten zwischen zwei Variablen
+	\end{itemize}	
+	\item Die Marginalisierung wird verwendet, um die Wahrscheinlichkeit einer Zufallsvariable durch Aufsummierung über alle bedingten Wahrscheinlichkeiten zu berechnen. Beispiel aus der VL:
+	\begin{align*}
+	p(A) = \sum_{i} \left(\sum_{j} p(A,b_i,c_j)\right)
+	\end{align*}
+	Lerne ich eine neue Zufallsvariable kennen, kann ich das weiterverarbeiten: Das Conditioning berechnet nun zu gegebener $p(A,B,C)$ die bedingte Wahrscheinlichkeit
+	\begin{align*}
+	p(B,C\mid a) = \frac{p(B,C,a)}{p(a)}
+	\end{align*}
+	wenn $p(a)$ bekannt. Die Inferenz steht zur Verfügung, um etwas über die Elternknoten in Erfahrung zu bringen, sobald wir die Kinderknoten auswerten können. Die Begriffe gehen thematisch Hand in Hand. Um zB die Inferenz zu berechnen, benötigen wir oft die Marginalisierung.
+	\item HMM\\
+	Markov Modelle haben zu einem Zeitpunkt $t$ einen Modellzustand $\omega_{t}$. Die Ordnung beschreibt, von welchen vorherigen Zuständen der Zustand $\omega_{t+1}$ abhängt. Ein Markov Modell erster Ordnung besagt also, dass $\omega_{t+1}$ alleine von $\omega_{t}$ abhängt.
+	\item zusammen mit 
+	\item Das HMM entspricht einem Automaten, welcher eine Menge $\Omega$ an Zuständen hat. Diese sind nicht einsichtbar. Die Übergänge $a_{ij}$ sind mit der Wahrscheinlichkeit gewichtet, wie wahrscheinlich es ist, dass von Zustand $\omega_j$ zu $\omega_i$ gewechselt wird. Das entspricht den Einträgen der Matrix $A$. Um auch etwas auswerten zu können, gibt es eine Ausgabemenge $V$, welcher zum Zustandwechsel mit einer gewissen Wahrscheinlichkeit $b_{jk}$ ausgegeben wird. Das entspricht den Einträgen der Matrix $B$. Haben wir also eine Sequenz $V^T$, können wir diese dann mit verschiedenen Algorithmen auswerten, um dann nachzuvollziehen, welche Zustandswechsel meines HMM zur Sequenz am wahrscheinlichsten ist.
+	\item Betrachten wir die drei grundlegenden Probleme zum HMM:
+	\begin{itemize}
+		\item Evaluationsproblem\\
+		Ein HMM mit den Matrizen $A,B$ ist vollständig vorhanden. Nun geht es um die Berechnung, wie wahrscheinlich es zu einer Sequenz $V^T$ ist, dass dieses Modell diese Sequenz erzeugt hat.
+		\item Dekodierungsproblem\\
+		Ein HMM ist mit einer Sequenz $V^T$ vorhanden. Was ist die wahrscheinlichste Sequenz an (versteckten) Zuständen $\omega^T$, sodass $V^T$ daraus abgeleitet wurde?
+		\item Lernproblem\\
+		Wir haben ein HMM, aber nur die jeweilige Anzahl der versteckten und Auswertungszustände ($|\Omega|, | V|$) und wollen nun die Parametermatrizen $A$,$B$ aus einem Satz an Trainingssequenzen berechnen.
+	\end{itemize}
+	\item Mit dem Forward- oder Backward-Algorithmus lässt sich sowohl das Evaluationsproblem, als auch das Dekodierungsproblem algorithmisch mit vernünftiger Laufzeit angehen. Naiv müssten wir jede mögliche Zustandsfolge evaluieren, was in exponentieller Laufzeit liegt. Mit den Forward- und Backward Algoithmus arbeiten wir allerdings rekursiv auf das höchstwahrscheinlichste nächste Element der Folge an Zuständen (Dekodierungsproblem), was deutlich an Rechenleistung spart.
+	\item Der Logarithmus ist streng monoton steigend und minimiert entstehende numerische Fehler. Des weiteren erhält er die Rechenoperationen, da in der einzelnen Summe exponiert wird.
+\end{enumerate}
+
 \begin{aufgabe}
 \end{aufgabe}
 Betrachte das Bayessche Netz mit den verteilten Wahrscheinlichkeiten auf dem Übungsblatt. Zu berechnen sind folgende Wahrscheinlichkeiten:
