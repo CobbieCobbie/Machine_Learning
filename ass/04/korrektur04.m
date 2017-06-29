@@ -15,4 +15,17 @@ samples = csvread('samples.csv')
 % Schätzung gegeben. Bayesche Schätzung: sigma_n geht mit ein in die
 % schätzung. Liegt daran: Das sigma passt zu meinem mü. Stichwort
 % Paarbildung. 
+
+%d)
+
+mu_0 = -10;
+var_0 = 1;
+n = 10 * 2.^[0:5]
+mu_n = @(n) 1 / (n*var_0 + var) * (var_0 + sum(samples(1:n)) + var*mu_0;
+for i = 1:length(n)
+    mu_i(i)= mu_n(n(i));
+end
+mu_i
+
+% mehr wurde nicht gezeigt
 end

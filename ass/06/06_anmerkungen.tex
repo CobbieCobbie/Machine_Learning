@@ -1,0 +1,18 @@
+\setcounter{chapter}{5}
+\chapter{Anmerkungen}
+
+\section{Bayessche Netze}
+
+Ein Bayessches Netz ist ein zykelfreier gerichteter Graph. Eine Kante beschreibt also eine Abhängigkeit zwischen Knoten. Die Knoten sind Ereignisse, die Kanten beschreiben causale Abhängigkeit. Das heißt also auch irgendwo eine stochastische Abhängigkeit (bedingte Wahrscheinlichkeit?)
+
+\begin{align*}P(A\cap B) = P(A)\cdot P(B) \Leftrightarrow P(A\mid B) = \frac{P(A\cap B)}{P(B)}= P(A)
+\end{align*}
+Tafelbeispiel $G = (V,E) ~\mid~ V = \{A,B,C\}~\mid~ E= \{(a,b),(a,c),(b,c)\}$
+\begin{align*}
+P(A) \cdot P(B\mid A) \cdot P(C\mid A,B) = P(A) \cdot \frac{P(A\cap B)}{P(A)} \cdot \frac{P(A\cap B\cup C)}{P(A\cap B)} = P(A\cap B\cap C)
+\end{align*}
+Die Pfeile symbolisieren eine Gewichtung in dem Sinne.
+\begin{align*}
+	P(a) = \sum_{b\in B,c\in C} P(a,B,C)
+\end{align*}
+Ist ein Grundprinzip für das Blatt 6. Genauer: selbst überlegen. 

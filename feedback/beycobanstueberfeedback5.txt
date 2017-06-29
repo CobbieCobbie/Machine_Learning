@@ -1,0 +1,23 @@
+Feedback Übung 5				Bey, Coban, Stüber
+
+
+A1							A2
+a	b	c	d	e	Σ		Σ
+0,0	2,5	1,0	1,0	1,0	5,5		6,5
+	
+A3									
+b	c	d	e	f	Σ	
+2,0	2,0	0,0	1,0	–	5,0
+
+A4			
+b	c	d	Σ
+–	–	–	0,0
+
+
+Σ Ü5 	17,0
+
+
+Anmerkungen:
+
+1a:	1P Abzug für falschen Dateinamen
+3d:	f.
