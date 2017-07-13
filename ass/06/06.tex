@@ -1,0 +1,102 @@
+\ExTitle{6}
+\begin{aufgabe}
+\end{aufgabe}
+
+\begin{enumerate}[a)] 
+	\item Bayessche Netze
+	\begin{itemize}
+		\item[Knoten] entsprechen den Zufallsvariablen
+		\item[Kanten] entsprechen den bedingten Wahrscheinlichkeiten zwischen zwei Variablen
+	\end{itemize}	
+	\item Die Marginalisierung wird verwendet, um die Wahrscheinlichkeit einer Zufallsvariable durch Aufsummierung über alle bedingten Wahrscheinlichkeiten zu berechnen. Beispiel aus der VL:
+	\begin{align*}
+	p(A) = \sum_{i} \left(\sum_{j} p(A,b_i,c_j)\right)
+	\end{align*}
+	Lerne ich eine neue Zufallsvariable kennen, kann ich das weiterverarbeiten: Das Conditioning berechnet nun zu gegebener $p(A,B,C)$ die bedingte Wahrscheinlichkeit
+	\begin{align*}
+	p(B,C\mid a) = \frac{p(B,C,a)}{p(a)}
+	\end{align*}
+	wenn $p(a)$ bekannt. Die Inferenz steht zur Verfügung, um etwas über die Elternknoten in Erfahrung zu bringen, sobald wir die Kinderknoten auswerten können. Die Begriffe gehen thematisch Hand in Hand. Um zB die Inferenz zu berechnen, benötigen wir oft die Marginalisierung.
+	\item HMM\\
+	Markov Modelle haben zu einem Zeitpunkt $t$ einen Modellzustand $\omega_{t}$. Die Ordnung beschreibt, von welchen vorherigen Zuständen der Zustand $\omega_{t+1}$ abhängt. Ein Markov Modell erster Ordnung besagt also, dass $\omega_{t+1}$ alleine von $\omega_{t}$ abhängt.
+	\item zusammen mit 
+	\item Das HMM entspricht einem Automaten, welcher eine Menge $\Omega$ an Zuständen hat. Diese sind nicht einsichtbar. Die Übergänge $a_{ij}$ sind mit der Wahrscheinlichkeit gewichtet, wie wahrscheinlich es ist, dass von Zustand $\omega_j$ zu $\omega_i$ gewechselt wird. Das entspricht den Einträgen der Matrix $A$. Um auch etwas auswerten zu können, gibt es eine Ausgabemenge $V$, welcher zum Zustandwechsel mit einer gewissen Wahrscheinlichkeit $b_{jk}$ ausgegeben wird. Das entspricht den Einträgen der Matrix $B$. Haben wir also eine Sequenz $V^T$, können wir diese dann mit verschiedenen Algorithmen auswerten, um dann nachzuvollziehen, welche Zustandswechsel meines HMM zur Sequenz am wahrscheinlichsten ist.
+	\item Betrachten wir die drei grundlegenden Probleme zum HMM:
+	\begin{itemize}
+		\item Evaluationsproblem\\
+		Ein HMM mit den Matrizen $A,B$ ist vollständig vorhanden. Nun geht es um die Berechnung, wie wahrscheinlich es zu einer Sequenz $V^T$ ist, dass dieses Modell diese Sequenz erzeugt hat.
+		\item Dekodierungsproblem\\
+		Ein HMM ist mit einer Sequenz $V^T$ vorhanden. Was ist die wahrscheinlichste Sequenz an (versteckten) Zuständen $\omega^T$, sodass $V^T$ daraus abgeleitet wurde?
+		\item Lernproblem\\
+		Wir haben ein HMM, aber nur die jeweilige Anzahl der versteckten und Auswertungszustände ($|\Omega|, | V|$) und wollen nun die Parametermatrizen $A$,$B$ aus einem Satz an Trainingssequenzen berechnen.
+	\end{itemize}
+	\item Mit dem Forward- oder Backward-Algorithmus lässt sich sowohl das Evaluationsproblem, als auch das Dekodierungsproblem algorithmisch mit vernünftiger Laufzeit angehen. Naiv müssten wir jede mögliche Zustandsfolge evaluieren, was in exponentieller Laufzeit liegt. Mit den Forward- und Backward Algoithmus arbeiten wir allerdings rekursiv auf das höchstwahrscheinlichste nächste Element der Folge an Zuständen (Dekodierungsproblem), was deutlich an Rechenleistung spart.
+	\item Der Logarithmus ist streng monoton steigend und minimiert entstehende numerische Fehler. Des weiteren erhält er die Rechenoperationen, da in der einzelnen Summe exponiert wird.
+\end{enumerate}
+
+\begin{aufgabe}
+\end{aufgabe}
+Betrachte das Bayessche Netz mit den verteilten Wahrscheinlichkeiten auf dem Übungsblatt. Zu berechnen sind folgende Wahrscheinlichkeiten:
+\begin{enumerate}[a)]
+	\item $p(x_1)$
+	\begin{align}
+		p(x_1) &= \sum_{i,j,k,l} p(x_1,a_i,b_j,c_k,d_l)\\
+		&\underbrace{=}_{Graph} \sum_{i,j,k,l} p(x_1\mid a_i,b_j)\cdot p(a_i)\cdot p(b_j) \cdot p(c_k\mid x_1) \cdot p(d_l\mid x_1)\\
+	    &= \sum_{i,j} \sum_{k,l} p(x_1\mid a_i,b_j)\cdot p(a_i)\cdot p(b_j) \cdot p(c_k\mid x_1) \cdot p(d_l\mid x_1)\label{a:1}
+	\end{align}
+	In Zeile \ref{a:1} betrachten wir nun $p(c_k\mid x_1)$ und $p(d_l\mid x_1)$. Dies heißt, dass wir über eine normierte Zeile iterieren, sowohl $p(c_k\mid x_1)$ als auch $p(d_l\mid x_1)$ summieren sich zu 1 auf, wenn wir sie ausklammern. Somit fällt die innere Summe mit den einzelnen Wahrscheinlichkeiten raus. Übrig bleibt also:
+	\begin{align}
+	= \sum_{i,j} p(x_1\mid a_i,b_j)\cdot p(a_i)\cdot p(b_j)
+	\end{align}
+	Macht auch Sinn, denn es interessiert an Hand vom Graphen für die Wahrscheinlichkeit von Lachs nicht, ob er o.B.d.A. hell oder breit ist.
+	\begin{align}
+	&= p(a_i) \cdot \sum_{i,j} p(x_1\mid a_i,b_j) \cdot p(b_j)\\
+	&= 0,25 \cdot (0,5 \cdot 0,6 + 0,7\cdot 0,4 + 0,6\cdot 0,6 + 0,8\cdot 0,4 \\
+	&+ 0,4\cdot 0,6 + 0,1\cdot 0,4 + 0,2\cdot 0,6 + 0,3\cdot 0,4) = \underline{0,445}
+	\end{align}
+	\item $p(a_1,b_1,x_1,c_1,d_2)$
+	\begin{align*}
+	&= p(a_1) \cdot p(b_1) \cdot p(x_1\mid a_1,b_1) \cdot p(c_1\mid x_1) \cdot p(d_2\mid x_1)\\
+	&= 0,25 \cdot 0,6 \cdot 0,5 \cdot 0,6 \cdot 0,7 = 0,0315
+	\end{align*}
+	\item $p(x_1\mid c_2)$\\
+	Berechne zuerst $p(c_2)$:
+	\begin{align*}
+		p(c_2) = \sum_{i,j,k,l} p(a_i,b_j,x_k,c_2,d_e)\\
+	\end{align*}
+	Da wir in Teilaufgabe 1 bereits die Wahrscheinlichkeit für Lachs - und somit auch für Barsch - berechnet haben, kann ein erheblicher Teil der Rechnung übersprungen werden. Das liegt am Bayesschen Netz: Die Wahrscheinlichkeit eines Knotens ist bedingt durch seine Elternknoten - in unserem Fall X und bereits ausgerechnet.
+	\begin{align*}
+		&= \sum_{i} p(c_2\mid x_i)  \cdot p(x_i)\\
+		&= 0,2\cdot 0,445 + 0,3 \cdot 0,555 = 0,2555 
+	\end{align*}
+	\begin{align*}
+		p(x_1\mid c_2) &= \frac{p(c_2,x_1)}{p(c_2)}\underbrace{=}_{\texttt{Satz von Beyes}} \frac{p(x_1)\cdot p(c_2\mid x_1)}{p(c_2)} = 0,3483
+	\end{align*}
+	\item $p(a_3\mid x_2,d_1)$
+	Laut Tutorium gilt folgende Gleichung:
+	\begin{align}
+		p(a_3\mid x_2,d_1) = \frac{p(a_3,x_2,d_1)}{p(x_2)\cdot p(d_1\mid x_2)}\label{d:ag}
+	\end{align}
+	Berechne nun den Zähler aus \ref{d:ag}
+	\begin{align*}
+	p(a_3,x_2,d_1) &= \sum_{i,j} p(a_3)\cdot p_(b_i) \cdot p(x_2\mid a_3,b_i) \cdot \underbrace{p(c_j\mid x_2)}_{=1}\\
+	&= p(a_3) \cdot p(d_1\mid x_2) \cdot \sum_{i} p(b_i) \cdot p(x_2\mid a_3,b_i)\\
+	&= 0,25 \cdot 0,6 \cdot (0,6\cdot 0,6 + 0,4 \cdot 0,9) = 0,108
+	\end{align*}
+	Setzen wir das ganze nun in \ref{d:ag} ein, erhalten wir:
+	\begin{align*}
+		p(a_3\mid x_2,d_1) = \frac{0,108}{0,555\cdot 0,6} = 0,3243
+	\end{align*}
+	\item $p(c_1\mid d_2,x_1)$\\
+	Das Vorgehen ist gleich wie bei Teilaufgabe d)
+	\begin{align*}
+		p(x_1,c_1,d_2) &= \sum_{i,j} p(a_i)\cdot p(b_j) \cdot p(x_1\mid a_i,b_j) \cdot p(c_1\mid x_1)\cdot p(d_2\mid x_1)\\
+		&=p(c_1\mid x_1)\cdot p(d_2\mid x_1) \cdot \underbrace{\sum_{i,j} p(a_i) \cdot p(b_j) \cdot p(x_1\mid a_i,b_j)}_{=p(x_1)}
+	\end{align*}
+	Einsetzen in \ref{d:ag}
+	\begin{align*}
+	p(c_1\mid d_2,x_1) &= \frac{p(c_1\mid x_1)\cdot p(d_2\mid x_1)\cdot p(x_1)}{p(d_2\mid x_1)\cdot p(x_1)}\\
+	&= p(c_1\mid x_1) = 0,6
+	\end{align*}
+	
+\end{enumerate}
