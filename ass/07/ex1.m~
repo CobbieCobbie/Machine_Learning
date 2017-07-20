@@ -1,0 +1,21 @@
+function p = forward(X, t, model)
+
+numberHiddenStates = dim(model.A,1);
+numberVisibleStates = dim(model.B, 1);
+
+a = zeros(t,numberHiddenStates);
+for i = 1:numberHiddenStates
+    a(1,i) = model.startingState(i);
+end
+
+for t2 = 2:t
+    for i = 1:numberHiddenStates
+        sum = 0;
+        for j=1:numberHiddenStates
+            sum = sum + a(t-1, j) * hmm.a(j, i);
+        end
+        a(t, i) = sum * 
+    end
+end
+
+end
